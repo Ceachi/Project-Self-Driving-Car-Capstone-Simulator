@@ -32,6 +32,8 @@ In this project we develop a system, using ROS nodes, to implement an autonomous
 	1. [Model Evaluation](#i-model-evaluation)
 7. [How to run](#7-how-to-run)
 8. [Workspace issues](#8-workspace-issues)
+9. [Others](#9-others)
+
 
 ## 1. Overview
 
@@ -488,5 +490,6 @@ cd /home/workspace/CarND-Capstone/ros
 rosdep install --from-paths src --ignore-src --rosdistro=kinetic -y
 ```
 
-
-
+## 7. Others
+Articles:
+1. https://medium.com/@marcin.sielski/capstone-project-for-self-driving-car-nanodegree-program-3c54c3c704bf
