@@ -1,5 +1,9 @@
 # Capstone Project: Program an Autonomous Vehicle
 
+I did the project alone:  
+Student Ceachi Bogdan  
+Email address: ceachi.bogdan@gmail.com  
+
 [![Udacity - Self-Driving Car NanoDegree](https://s3.amazonaws.com/udacity-sdc/github/shield-carnd.svg)](http://www.udacity.com/drive)
 
 In this project we develop a system, using ROS nodes, to implement an autonomous vehicle. Our car will follow the designated waypoints along a road, recognizes the traffic light status from camera images, stop on red and restart driving on green. This system is tested on the [Udacity simulator](https://github.com/udacity/CarND-Capstone/releases) and will be tested on the real Udacity self-driving car (Carla) on project delivery.
