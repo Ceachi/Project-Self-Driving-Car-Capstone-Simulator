@@ -30,6 +30,8 @@ In this project we develop a system, using ROS nodes, to implement an autonomous
 	6. [Export and test the final graph](#vi-export-and-test-the-final-graph)
 6. [Final Integration](#6-final-integration)
 	1. [Model Evaluation](#i-model-evaluation)
+7. [How to run](#7-how-to-run)
+8. [Workspace issues](#8-workspace-issues)
 
 ## 1. Overview
 
@@ -416,6 +418,75 @@ For the simulator images the SSD-Mobilenet model was quite accurate and, being t
 
 For the real site however, the accuracy was not as high and finally we decided to use Fastest-RCNN despite the higher evaluation time. To speed up the evaluation we processed only the higher half of the image, as the lower part contains the car's hood, not necessary for the task. Example videos for the classification accuracy in the different models are included in [SSD-Mobilenet](ssd_mobilenet.mp4), [SSD-Inception](ssd_inception.mp4), and [Fastest-CRNN](faster_rcnn.mp4).
 
+## 6. How to run
+1. Clone the project repository  
+```
+git clone https://github.com/udacity/CarND-Capstone.git
+```
+2. Install python dependencies  
+``` 
+cd CarND-Capstone
+pip install -r requirements.txt
+```
+3. Make and run styx  
+```
+cd ros
+catkin_make
+source devel/setup.sh
+roslaunch launch/styx.launch
+```
+4. Run the simulator  
+
+## 7. Workspace issues
+
+1. AttributeError: 'SteeringReport' object has no attribute 'steering_wheel_angle_cmd'
+https://github.com/udacity/CarND-Capstone/issues/314  
+
+2. Compiling on Udacity workspace
+```
+CMake Warning at /opt/ros/kinetic/share/catkin/cmake/catkinConfig.cmake:76 (find_package):
+  Could not find a package configuration file provided by "dbw_mkz_msgs" with
+  any of the following names:
+
+    dbw_mkz_msgsConfig.cmake
+    dbw_mkz_msgs-config.cmake
+
+  Add the installation prefix of "dbw_mkz_msgs" to CMAKE_PREFIX_PATH or set
+  "dbw_mkz_msgs_DIR" to a directory containing one of the above files.  If
+  "dbw_mkz_msgs" provides a separate development package or SDK, be sure it
+  has been installed.
+Call Stack (most recent call first):
+  styx/CMakeLists.txt:10 (find_package)
+
+
+-- Could not find the required component 'dbw_mkz_msgs'. The following CMake error indicates that you either need to install the package with the same name or change your environment so that it can be found.
+CMake Error at /opt/ros/kinetic/share/catkin/cmake/catkinConfig.cmake:83 (find_package):
+  Could not find a package configuration file provided by "dbw_mkz_msgs" with
+  any of the following names:
+
+    dbw_mkz_msgsConfig.cmake
+    dbw_mkz_msgs-config.cmake
+
+  Add the installation prefix of "dbw_mkz_msgs" to CMAKE_PREFIX_PATH or set
+  "dbw_mkz_msgs_DIR" to a directory containing one of the above files.  If
+  "dbw_mkz_msgs" provides a separate development package or SDK, be sure it
+  has been installed.
+Call Stack (most recent call first):
+  styx/CMakeLists.txt:10 (find_package)
+
+
+-- Configuring incomplete, errors occurred!
+See also "/home/workspace/CarND-Capstone/ros/build/CMakeFiles/CMakeOutput.log".
+See also "/home/workspace/CarND-Capstone/ros/build/CMakeFiles/CMakeError.log".
+Invoking "cmake" failed
+```
+run the following commands  
+```
+sudo apt-get update
+sudo apt-get install -y ros-kinetic-dbw-mkz-msgs
+cd /home/workspace/CarND-Capstone/ros
+rosdep install --from-paths src --ignore-src --rosdistro=kinetic -y
+```
 
 
 
