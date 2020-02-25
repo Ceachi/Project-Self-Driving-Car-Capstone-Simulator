@@ -490,6 +490,6 @@ cd /home/workspace/CarND-Capstone/ros
 rosdep install --from-paths src --ignore-src --rosdistro=kinetic -y
 ```
 
-## 7. Others
+## 8. Others
 Articles:
 1. https://medium.com/@marcin.sielski/capstone-project-for-self-driving-car-nanodegree-program-3c54c3c704bf
