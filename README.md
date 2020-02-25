@@ -4,16 +4,6 @@
 
 In this project we develop a system, using ROS nodes, to implement an autonomous vehicle. Our car will follow the designated waypoints along a road, recognizes the traffic light status from camera images, stop on red and restart driving on green. This system is tested on the [Udacity simulator](https://github.com/udacity/CarND-Capstone/releases) and will be tested on the real Udacity self-driving car (Carla) on project delivery.
 
-## Members of Team **"Always straight to the point!"**
-
-|  Name		| Email Address	|
-|:---------------------------------------:|:---------------------:|
-| Andrei Sasinovich	|   ainfinum@gmail.com			|
-| Yan Wu		|   ianwu521@gmail.com			|
-| Ian Wang 	|   ian.immortal@gmail.com		|
-| Jean-Yves	|   jybourdon@hotmail.fr			|
-| Jose Horas<br>(team lead)	|   jose.horas@gmail.com			|
-
 ---
 
 <p align="center">
