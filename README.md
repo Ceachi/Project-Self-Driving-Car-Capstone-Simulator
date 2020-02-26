@@ -148,10 +148,6 @@ We decided to generate a dataset. We cut by 10-15 traffic lights of each color.
 
 Using OpenCV generate thousands of images by resizing traffic lights, changing contrast and brightness. As every traffic light was applied on a background by our script we could generate coordinates of drawn bounding boxes as well.
 
-<p align="center">
-<img src="imgs/red_54_b1.jpg" width="49%"  style="border:none;"> <img src="imgs/green_108_b1.jpg" width="49%"  style="border:none;">
-</p>
-
 TFRecord file was created on the fly by packing all our info into TF format using tensorflow function tf.train.Example
 
 ## 5. Traffic Light Classifier
@@ -248,9 +244,8 @@ PATH_TO_FROZEN_GRAPH = MODEL_NAME + '/frozen_inference_graph.pb'
 
 As it happens that the COCO dataset includes "Traffic Light" as an object category, when we run the inference script with one of our images, this class will probably be recognized. However, the model as it is will not be able to classify the traffic light state. Below you can see the result on a general picture and on one of our pictures out of the simulator.
 
-General picture|Udacity Simulator
-:-:|:-:
-![alt-text-1](imgs/pre-trained-inference-1.png "title-1") | ![alt-text-2](imgs/pre-trained-inference-2.png "title-2")
+Udacity Simulator
+![alt-text-2](imgs/pre-trained-inference-2.png "title-2")
 
 ### iii. Configure the pipeline.config file
 
